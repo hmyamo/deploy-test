@@ -1,0 +1,18 @@
+"deploy": {
+    "production": {
+        "user": "node",
+        "host": "server-ip",
+        "repo": "git@github.com/vuejspm2.git",
+        "ref": "origin/master",
+        "path": "/var/www/production",
+        "post-deploy": "npm install && npm run build && pm2 startOrRestart ecosystem.json --env production"
+    },
+    "development": {
+        "user": "node",
+        "host": "server-ip",
+        "repo": "git@github.com/vuejspm2.git",
+        "ref": "origin/master",
+        "path": "/home/node/development/vue-sfcomponents",
+        "post-deploy": "npm install && pm2 startOrRestart ecosystem.json --env development"
+    }
+}
