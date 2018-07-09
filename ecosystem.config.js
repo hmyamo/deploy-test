@@ -3,7 +3,7 @@ module.exports = {
     name: 'vue-componented',
     script: './server.js',
     watch: true,
-    instance2: 2,
+    instance: 2,
     exec_mode: 'cluster',
     env: {
       COMMON_VARIABLE: 'true',
