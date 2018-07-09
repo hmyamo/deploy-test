@@ -2,17 +2,17 @@
     "production": {
         "user": "node",
         "host": "server-ip",
-        "repo": "git@github.com/vuejspm2.git",
+        "repo": "git@github.com:hmyamo/deploy-test.git",
         "ref": "origin/master",
         "path": "/var/www/production",
         "post-deploy": "npm install && npm run build && pm2 startOrRestart ecosystem.json --env production"
     },
     "development": {
         "user": "node",
-        "host": "server-ip",
-        "repo": "git@github.com/vuejspm2.git",
+        "host": "localhost",
+        "repo": "git@github.com:hmyamo/deploy-test.git",
         "ref": "origin/master",
-        "path": "/home/node/development/vue-sfcomponents",
+        "path": "/home/node/development/deploy-test",
         "post-deploy": "npm install && pm2 startOrRestart ecosystem.json --env development"
     }
 }
